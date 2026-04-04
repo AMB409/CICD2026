@@ -1,4 +1,4 @@
-```markdown
+
 # Laboratoire CI/CD – GitHub Actions + Docker Hub + k3s
 
 > **Objectif du labo**  
@@ -425,6 +425,3 @@ Si tu as terminé en avance, tu peux :
 - [ ] Le pipeline fonctionne aussi pour `qa` et `prod`.
 - [ ] Tu comprends le rôle de chaque étape du pipeline.
 
-> Si quelque chose bloque, note l’étape précise et le message d’erreur : c’est comme ça qu’on apprend vraiment à faire du CI/CD.
-
-```
