@@ -219,7 +219,3 @@ Pour réussir ce laboratoire CI/CD, retiens ceci :
 - Chaque branche correspond à un environnement Kubernetes différent.
 - Toujours vérifier ta branche avant de modifier des fichiers.
 
----
-
-Si tu veux, je peux aussi te créer une **fiche ultra‑résumée** ou une **version PDF** pour impression en classe.
-```
