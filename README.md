@@ -67,7 +67,7 @@ Avant de commencer, tu dois avoir :
 
 ---
 
-## 3. Mise en place et récupéreration du projet de départ
+## 3. Mise en place et récupération du projet de départ
 
 ### 3.1. Installer la fonctionnalité git, node.js et créer un répertoire pour le projet sur votre contrôle plan.
    ````
@@ -97,7 +97,7 @@ Tu as maintenant ton propre dépôt avec le code du labo.
 
 ### 3.4. Clôner ton fork sur la VM
 
-Sur la VM (dans VS Code ou terminal) tu vas téléchager de ton git le projet en local sur la vm dans le répertoire project.
+Sur la VM (dans VS Code ou terminal) tu vas télécharger de ton git le projet en local sur la vm dans le répertoire project.
 
 ```bash
 git clone https://github.com/<TON_USERNAME>/cicd2026.git
@@ -133,13 +133,13 @@ git push -u origin dev
 git push -u origin qa
 
 # ------------------------------------------------------------
-# Étape 6 : Positionnement sur la branche de dv
+# Étape 6 : Positionnement sur la branche de dev
 # ------------------------------------------------------------
 git checkout dev
 
 ```
 
-### 3.6. Création du kubeconfig afin de permette une communication sécurisé entre notre cluster et gitHub. 
+### 3.6. Création du kubeconfig afin de permettre une communication sécurisée entre notre cluster et gitHub. 
 - voir : [Voir la documentation kubeconfig](kubeconfig.md)
 - Mettre ce fichier dans le répertoire K8S de votre projet. 
 
@@ -273,7 +273,7 @@ metadata:
     kubernetes.io/ingress.class: "traefik"
 spec:
   rules:
-# ajouter dans le /etc/host
+# ajouter dans le /etc/hosts
 # 192.168.21.100 hello.cluster.local
     - host: hello.cluster.local
       http:
@@ -435,7 +435,7 @@ jobs:
 
 ---
 - Faire un test
-- construire l'image initial (Change dockerhub_username pour ton compte dockerhub)
+- construire l'image initial (Change dockerhub_username pour ton compte Docker Hub)
 ```
 docker login -u "ton User dockerHub"
 sudo usermod -aG docker $USER
@@ -444,9 +444,9 @@ sudo groupadd docker
 docker build -t dockerhub_username/hello-app:dev .
 docker push dockerhub_username/hello-app:dev
 ```
-- Faire un déploiement initial sur K3S sur le namespace de dev
-- Faite une nouvelle version du fichier deploiyement.yaml
-- Changer la variable DOCKER_HUB_ pour la valeur.
+- Faites un déploiement initial sur K3S sur le namespace de dev
+- Faites une nouvelle version du fichier deploiyment.yaml
+- Changer la variable DOCKER_HUB_USERNAME pour la valeur.
 - kubectl apply -f deploiyement.yaml
 
 ---
@@ -565,7 +565,7 @@ kubectl rollout restart deployment hello-app -n dev
 
 Si tu as terminé en avance, tu peux :
 
-- Ajouter une étape **tests** dans le CICD qui vérifier le code.
+- Ajouter une étape **tests** dans le CICD qui vérifie le code.
 
 ---
 
