@@ -1,5 +1,5 @@
 
-# Création d’un kubeconfig qui permettra la communication entre le cluster k3s et gitAction
+# Création d’un kubeconfig qui permettra la communication entre le cluster k3s et Github Action
 
 ## 1. Création du ServiceAccount
 
@@ -28,7 +28,7 @@ rules:
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
 ```
 
-Appliquer ce rôle dans les trois namespaces :
+Appliquer ce rôle sur les trois namespaces :
 
 ```bash
 kubectl apply -f role-etudiant.yaml -n dev
@@ -52,7 +52,7 @@ kubectl create rolebinding etudiant-rb --role=etudiant-role --serviceaccount=pro
 
 # 4️. Génération du token du ServiceAccount
 
-Générer un token pour le ServiceAccount (un seul token suffit pour toute la cohorte) :
+Générer un token pour le ServiceAccount (un seul token suffit pour toute les namespaces) :
 
 ```bash
 kubectl create token etudiant-srvaccount -n dev
@@ -70,7 +70,7 @@ Afficher le kubeconfig maître de k3s :
 sudo cat /etc/rancher/k3s/k3s.yaml
 ```
 
-Récupérer :
+Récupérer les informations suivantes :
 
 - `certificate-authority-data: <BASE64_CA>`
 
@@ -88,8 +88,8 @@ kind: Config
 clusters:
 - name: k3s-cluster
   cluster:
-    server: https://192.168.21.100:6443 # est l'adresse du control-plane
-    certificate-authority-data: <CA_BASE64>
+    server: https://192.168.21.100:6443 # C'est l'adresse du control-plane
+    certificate-authority-data: <BASE64_CA>
 
 users:
 - name: etudiant
