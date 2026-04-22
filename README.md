@@ -458,7 +458,7 @@ Dans ton dépôt GitHub :
 
 a. Ouvre **Settings** </br>
 b. Va dans **Actions**</br>
-c. Clique sur **s**</br>
+c. Clique sur **Runners**</br>
 d. Sélectionne **New self-hosted runner**</br>
 
 #### 1.2. Choisir la plateforme
