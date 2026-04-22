@@ -450,16 +450,16 @@ docker push dockerhub_username/hello-app:dev
 - kubectl apply -f deploiyement.yaml
 
 ---
-#### 1.1 Création d’un runner self‑hosted GitHub Actions
+#### 1.1 Création d’un  self‑hosted GitHub Actions
 
-##### Ouvre la vm RunnerGitHubActions, c'est dans cette VM que tu entreras les commandes.
+##### Ouvre la vm GitHubActions, c'est dans cette VM que tu entreras les commandes.
 
 Dans ton dépôt GitHub :
 
-a. Ouvre **Settings**
-b. Va dans **Actions**
-c. Clique sur **Runners**
-d. Sélectionne **New self-hosted runner**
+a. Ouvre **Settings** </br>
+b. Va dans **Actions**</br>
+c. Clique sur **s**</br>
+d. Sélectionne **New self-hosted runner**</br>
 
 #### 1.2. Choisir la plateforme
 - **OS :** Linux  
