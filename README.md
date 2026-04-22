@@ -445,9 +445,9 @@ docker build -t dockerhub_username/hello-app:dev .
 docker push dockerhub_username/hello-app:dev
 ```
 - Faire un déploiement initial sur K3S sur le namespace de dev
-- Faite une nouvelle version du fichier deploiyement.yaml
+- Faite une nouvelle version du fichier deployement.yaml
 - Changer la variable DOCKER_HUB_ pour la valeur.
-- kubectl apply -f deploiyement.yaml
+- kubectl apply -f k8s/deployement.yaml
 
 ---
 #### 1.1 Création d’un runner self‑hosted GitHub Actions
