@@ -517,7 +517,7 @@ kubectl get pods -n dev
 kubectl get svc -n dev
 ```
 
-Tu devrais voir un pod `hello-app-dev` et un service `hello-app-dev`.
+Tu devrais voir un pod `hello-app` et un service `hello-app-dev`.
 
 Pour tester l’application :
 
