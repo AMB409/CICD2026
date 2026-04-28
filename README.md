@@ -499,7 +499,6 @@ git push origin dev
 1. Cliquer sur Actions sur la barre horizontale
 2. Cliquer sur le bouton
 <img width="874" height="341" alt="image" src="https://github.com/user-attachments/assets/81602ccb-dc6a-4195-917f-e087b9dc0772" />
-<br>
 
 #### 4.2 Test de l'action
 1. Va sur ton dépôt GitHub.
