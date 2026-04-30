@@ -72,3 +72,28 @@ Utilisez les informations suivantes pour vous connecter aux machines virtuelles 
 ```text
 Utilisateur : admin4t4
 Mot de passe : Passw0rd
+```
+
+## 6. Installation de K3S
+
+- Aller dans le répertoire scripts de ce projet git
+- Ouvrez le fichier init-control-plan.sh et copiez-le.
+- Aller sur la vm du control-plane et aller dans le répertoire /home/admin4t4/k3s-lab/
+- Changer le contenu du script init-control-plan.sh par le contenu copié qui vient de ce projet.
+- Faite la même chose avec le Worker avec le contenu du fichier
+
+## 7. Exécuter le contenu du init-control-plan.sh sur le control-plane
+
+- Exécuter le script et attendre qu'il se termine
+- Faire la commande kubectl get nodes 
+- Si le résultat est bon, passer à l'autre étape
+
+## 8. Exécuter le contenu du join-worker.sh sur le worker
+
+- Exécuter le script et attendre qu'il se termine
+- Faire la commande systemctl status k3s-agent
+- Si le résultat est bon vous pouvez passer au Runner
+
+## 9. Configurer le Runner
+
+- Faites la même procédure qui se trouve sur le README.md (page de démarrage du projet git)
